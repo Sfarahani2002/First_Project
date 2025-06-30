@@ -10,4 +10,10 @@ numb = [1,2,3,4,5,6]
 print(sum(numb, 10)) # add 10 ezaf b jam adad
 #round.py
 number = 4.457 # gerd b paeen ya bala
-print(round(number, 2))
+print(round(number, 2)) # ta chand raqam ashar 
+print("###################################################")
+print("test")
+# abs 
+# len
+# round
+# sum
