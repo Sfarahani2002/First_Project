@@ -11,9 +11,13 @@ student = ['mohammad', 'saleh', 'fr']
 midterm = [80, 85, 90]
 final = [85, 90, 95]
 
+#bishtarin nomre gerefte shode
+
 finalGrades = [max(pair) for pair in zip(midterm,final)]
 print(finalGrades)
+
 print(list(pair for pair in zip(student,midterm,final)))
+
 #{'mohammad':85, 'saleh':90, 'fr':95}
 final_grades = {t[0]:max([t[1], t[2]]) for t in zip(student,midterm,final)}# T
 print(final_grades )
@@ -27,6 +31,8 @@ final_grades_2 = zip(
 )
 print(dict(final_grades_2))
 
+#age miangin bekhaim
+
 average = zip(
     student,
     map(
@@ -35,7 +41,9 @@ average = zip(
     )
 )
 print(dict(average))
+
 # age faqat add bekhaym
+
 rec = map(
         lambda pair: (pair[0] + pair[1] ) / 2,
         zip(midterm,final)
