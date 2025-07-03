@@ -21,10 +21,20 @@
 # print(int("5"))
 # print(int("fr"))
 # --------------------
-# ket Error
+# key Error
 # bishtar toye dict ha 
 # person = {}
 # print(person["name"])
 # ----------------------
 # AttributeError
-"salehFarahani".test 
+# "salehFarahani".test 
+#------------------------
+# AttributeError 
+# key Error
+# ValueError
+# IndexError
+# type error
+# NameError
+# SyntaxErro
+# -----------------------
+# finish part Error
