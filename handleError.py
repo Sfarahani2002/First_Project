@@ -23,11 +23,22 @@
 # print(get(person,"name"))
 # print(get(person,"age"))
 #--------------------------------------------
-try:
-    num = int(input('please inter a number: '))
-except:
-    print('thats not a number!')
-else:
-    print('this is else section')
-finally:
-    print('thisis finally section')
+# try:
+#     num = int(input('please inter a number: '))
+# except:
+#     print('thats not a number!')
+# else:
+#     print('this is else section')
+# finally:
+#     print('thisis finally section')
+#---------------------------------------------
+while True:
+  try:
+      num = int(input('please inter a number: '))
+  except:
+      print('thats not a number! please enter another one :')
+  else:
+     print('you have entered a number')
+     break
+  finally:
+     print('this is finally section')
