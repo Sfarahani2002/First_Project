@@ -1,4 +1,3 @@
-import def
 # try:
 #     print(myName)
 # except:
@@ -50,7 +49,9 @@ while True:
          return first / second
      except ZeroDivisionError:
          return('Dont divided by zero !!')
-     except TypeError:
+     except TypeError as error:
+         print(error)
          return('first and second must be num !!!')
      
 print(divide(10,2))
+#----------------------------------------------
