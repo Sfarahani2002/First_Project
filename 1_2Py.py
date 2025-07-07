@@ -1,9 +1,9 @@
 
-# = input("please enter number1: ")
+#a = input("please enter number1: ")
 #a = int(a)
 #b = input("please enter number2: ")
- = int(b)
-print(a, ' + ', b , ' = ', a + b)
+#b = int(b)
+#print(a, ' + ', b , ' = ', a + b)
 
 #age=input("enter your age :")
 #A#ge=int(age)
