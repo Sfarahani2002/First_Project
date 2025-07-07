@@ -13,6 +13,6 @@ color = input('what color? : ')
 if color not in valid_colors:
     color = "blue"
 
-ascii_art = pyfi11glet.figlet_format(message)
+ascii_art = pyfiglet.figlet_format(message)
 ascii_art = colored(ascii_art,color=color)
 print(ascii_art)
