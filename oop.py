@@ -6,7 +6,10 @@ courses = ['python', 'java', 'csharp']
 numbers.append
 courses.append
 
+
+
 help(list)
 numbers.bit_lenght()
 
 # mahiat oon ha va raftar haie harkodom 
+ 
