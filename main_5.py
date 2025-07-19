@@ -1,3 +1,7 @@
+import calculator
+from CalculatoreModel import Calculator
+
+
 class User:
     def __init__(self,gotName,gotFamili,gotAge):
         self.Name = gotName
