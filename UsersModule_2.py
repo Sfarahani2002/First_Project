@@ -13,6 +13,7 @@ class User:
     @classmethod
     def getActiveUsersCount(cls):
         print(f"there are currently {cls.activeUsersCount} active users")
+
     @classmethod
     def from_string(cls, string_data):
        # data = string_data.split(',')
