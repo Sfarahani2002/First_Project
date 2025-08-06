@@ -1,0 +1,18 @@
+class counter:
+    def __init__(self, start, end):
+        self.current = start
+        self.end = end
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.current < self.end:
+            num = self.current
+            self.current += 1
+            return num
+        raise StopIteration
+
+myCounter = counter(1, 20)
+for num in myCounter:
+    print(num)

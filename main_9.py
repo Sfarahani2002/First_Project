@@ -20,7 +20,6 @@ class person:
         return self.money / other.money
 
 
-
 person_1 =  person('saleh', 'fr', 23,500)
 person_2 =  person('beni', 'fa', 22, 2000)
 print(person_1)
