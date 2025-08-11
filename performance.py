@@ -15,9 +15,9 @@ def fib_generator(max):
     y = 1
     count = 0
     while count < max:
-        x, y = y, x + y
+        x, y  = y, x + y
         yield y
         count += 1
 
-for num in fib_generator(100):
+for num in fib_generator(1000000):
     print(num)
