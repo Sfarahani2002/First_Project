@@ -1,8 +1,10 @@
 testTextFile = open("./text.txt")
+
 print(testTextFile.read())
 testTextFile.seek(0)
 print(testTextFile.read())
 print(testTextFile.read())
+
 print(testTextFile.read())
 print(testTextFile.read())
 
