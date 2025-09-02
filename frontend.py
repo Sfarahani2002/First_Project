@@ -1,6 +1,14 @@
 from tkinter import *
 import backend
 
+
+def clear_list():
+    list1.delete(0, END)
+
+def fill_list(books):
+    for book in books:
+        list1.insert(END, book)
+
 window=Tk()
 
 # ================ Labels ==================
@@ -46,10 +54,22 @@ sb1.configure(command=list1.yview)
 
 # ================= Button ==================
 
-b1 = Button(window, text="View All", width=12)
+def view_command():
+    clear_list()
+    books = backend.view()
+    fill_list(books)
+
+b1 = Button(window, text="View All", width=12, command=lambda: view_command())
 b1.grid(row=2, column=3)
 
-b2 = Button(window, text="Search Entry", width=12)
+
+def search_command():
+    clear_list()
+    books = backend.search(title_text.get(), author_text.get(), year_text.get(), isbn_text.get())
+    fill_list(books)
+
+
+b2 = Button(window, text="Search Entry", width=12, command=search_command)
 b2.grid(row=3, column=3)
 
 b3 = Button(window, text="Add Entry", width=12)
