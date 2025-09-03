@@ -72,7 +72,13 @@ def search_command():
 b2 = Button(window, text="Search Entry", width=12, command=search_command)
 b2.grid(row=3, column=3)
 
-b3 = Button(window, text="Add Entry", width=12)
+
+def add_command():
+    backend.insert(title_text.get(), author_text.get(),year_text.get(), isbn_text.get())
+    view_command()
+
+
+b3 = Button(window, text="Add Entry", width=12, command= lambda: add_command())
 b3.grid(row=4, column=3)
 
 b4 = Button(window, text="Update selected", width=12)
@@ -84,4 +90,5 @@ b5.grid(row=6, column=3)
 b6 = Button(window, text="Close", width=12)
 b6.grid(row=7, column=3)
 
+view_command()
 window.mainloop()
