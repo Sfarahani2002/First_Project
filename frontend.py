@@ -55,6 +55,7 @@ sb1.configure(command=list1.yview)
 
 def get_selected_row(event):
     global selected_book
+    selected_book = None
     if len(list1.curselection()) > 0:
         index = list1.curselection()[0]
         selected_book = list1.get(index)
