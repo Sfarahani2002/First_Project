@@ -32,12 +32,12 @@ e1 = Entry(window, textvariable=title_text)
 e1.grid(row=0, column=1)
 
 author_text = StringVar()
-e1 = Entry(window, textvariable=author_text)
-e1.grid(row=0,column=3)
+e2 = Entry(window, textvariable=author_text)
+e2.grid(row=0,column=3)
 
 year_text = StringVar()
-e1 = Entry(window, textvariable=year_text)
-e1.grid(row=1, column=1)
+e3 = Entry(window, textvariable=year_text)
+e3.grid(row=1, column=1)
 
 isbn_text = StringVar()
 e4=Entry(window, textvariable=isbn_text)
@@ -49,8 +49,30 @@ list1.grid(row=2, column=0, rowspan=6, columnspan=2)
 sb1 = Scrollbar(window)
 sb1.grid(row=2, column=2, rowspan=6)
 
+
 list1.configure(yscrollcommand=sb1.set)
 sb1.configure(command=list1.yview)
+
+def get_selected_row(event):
+    global selected_book
+    index = list1.curselection()[0]
+    selected_book = list1.get(index)
+    # title
+    e1.delete(0, END)
+    e1.insert(0, selected_book[1])
+    # author
+    e2.delete(0, END)
+    e2.insert(0, selected_book[2])
+
+    # year
+    e3.delete(0, END)
+    e3.insert(0, selected_book[3])
+    # isbn
+    e4.delete(0, END)
+    e4.insert(0, selected_book[4])
+
+
+list1.bind('<<ListboxSelect>>', get_selected_row)
 
 # ================= Button ==================
 
@@ -84,7 +106,12 @@ b3.grid(row=4, column=3)
 b4 = Button(window, text="Update selected", width=12)
 b4.grid(row=5, column=3)
 
-b5 = Button(window, text="Delete selected", width=12)
+
+def delete_command():
+    backend.delete(selected_book[0])
+    view_command()
+
+b5 = Button(window, text="Delete selected", width=12, command=delete_command)
 b5.grid(row=6, column=3)
 
 b6 = Button(window, text="Close", width=12)
