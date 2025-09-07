@@ -21,7 +21,14 @@ from pathlib import Path
 #     if item.is_dir():
 #         print(item)
 
-result = os.stat('./my_files/doc.txt')
-print(result)
-print(result.st_mtime)
-print(time.ctime(result.st_mtime))
+# result = os.stat('./my_files/doc.txt')
+# print(result)
+# print(result.st_mtime)
+# print(time.ctime(result.st_mtime))
+
+os.mkdir('test')
+os.mkdir('test/sub_directory')
+os.makedirs('test/sub_directory')
+
+path = Path('test')
+path.mkdir(exist_ok=True)
