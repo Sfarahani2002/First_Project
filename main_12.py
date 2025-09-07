@@ -39,3 +39,10 @@ os.unlink('./myfiles/doc.txt')
 file_path = pathlib.Path('./myfiles/index.html')
 file_path.unlink()
 os.unlink('./test/sub_directory')
+
+os.rmdir('./test/sub_directory')
+path = pathlib.Path('./test/sub_directory')
+path.rmdir()
+
+shutil.rmtree('./test')
+shutil.rmtree('./myfiles/pictures'))
