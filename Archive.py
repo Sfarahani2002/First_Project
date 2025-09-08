@@ -1,5 +1,7 @@
 import os
 import zipfile
+import shutil
+
 
 z = zipfile.ZipFile('./main.zip', 'w')
 z.write('./my_files')
@@ -33,3 +35,11 @@ z.close()
 z = zipfile.Zipfile('./data.zip', 'r')
 z.extractall('./extracted')
 z.close()
+#=============================================================
+
+
+shutil.make_archive('./backup', 'zip')
+# shutil.make_archive('./backup', 'zip', './backup')
+# shutil.make_archive('./backup', 'zip', './my_files')
+
+shutil.unpack_archive('./backup.zip', 'extracted')
