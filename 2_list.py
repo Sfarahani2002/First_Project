@@ -1,4 +1,4 @@
-myCourses = ["Python", "Kotlin", "Ionic"]
+myCourses = ["Python", "Kotlin", "Ionic", "vue js"]
 print(myCourses)
 myCourses_2 = ["JQuery", "Vue js"]
 #myCourses.append("JQuery","Vue Js")

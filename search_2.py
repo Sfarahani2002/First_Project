@@ -1,7 +1,6 @@
 import os
 import shutil
 
-
 # for data in os.walk('./my_files', topdown=False): az akhar b aval
 # for data in os.walk('./', topdown=False):  all files
 for data in os.walk('./my_files'):
