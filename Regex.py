@@ -63,3 +63,28 @@ import re
 #
 # endreigion
 
+
+# region other characters
+
+#non decimal digits => \D
+#decimal digits => \d
+#non white space => \S
+#white space => \s
+#non word => \W
+#word => \w
+
+# text = '123456'
+#
+# if re.search('^\d+$', text):
+#     print('this is ok')
+
+#endregion
+
+#region email regex
+
+text = '787jhkij@test.com'
+if re.search('^[\w\.-]+@([\w-]+\.)+[\w-]{2,4}$', text):
+    print('email is vali')
+
+
+#endregion
